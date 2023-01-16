@@ -25,7 +25,7 @@
 
 .img-banner{
   
-  background-image: url("../assets/img/1knz0vi3l.jpg");
+  background-image: url("../../../assets/img/1knz0vi3l.jpg");
    background-position: center center;
    height: 200px;
  
@@ -54,6 +54,9 @@
     color: #fff;
     text-transform: uppercase;
     padding: 0 12px;
+    font-family: Merriweather !important;
+    letter-spacing: .0125em!important;
+
 }
 
 .btn-abs{
@@ -87,4 +90,40 @@ width: 768px;
 }
 
 
+.container-nav{
+  background-color: #FFFCC7;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  max-width: 768px;
+  min-width: 320px;
+ 
+  bottom: 0%;
+  z-index: 6;
 
+}
+
+.container-nav{
+  border-top: 1px solid hsla(0,0%,100%,.12);
+  box-shadow: 0 2px 4px -1px rgba(0,0,0,.2),0 4px 5px 0 rgba(0,0,0,.14),0 1px 10px 0 rgba(0,0,0,.12)!important;
+}
+
+.mat-button-toggle{
+  background-color: transparent;;
+  color: #454545;
+}
+
+.mat-button-toggle:hover {
+  background-color: transparent;
+  color: #000000 !important;    
+}
+
+.mat-button-toggle-checked {
+  background-color:transparent;
+  color: #ECAE35 !important;
+}
+.nav-icons{
+  display: flex;
+
+
+}
