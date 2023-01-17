@@ -1,0 +1,62 @@
+.title-cockt{
+  font-size: 22px;
+}
+.container-1{
+  display: flex;
+  align-items: center;
+  background-color: #ECAE35;
+  font-family: Merriweather !important;
+}
+
+.mat-mdc-fab.mat-accent, .mat-mdc-mini-fab.mat-accent{
+  --mdc-fab-container-color: transparent !important;
+  height: 24px;
+
+}
+.text-c-bambu{
+font-size: 12px;
+}
+.cocktail-bambu{
+  margin: 10px;
+}
+
+.container-2{
+  background-color: #CF992F;
+  height: 48px;
+}
+
+.container-3{
+ 
+  background-color: #FFFCC7;
+}
+
+.container-separate{
+  height: 140px !important;
+}
+
+.number-float{
+  float: right;
+}
+
+.name-separate{
+  display: flex !important;
+}
+.text-prod{
+  margin-left: 10px;
+}
+
+.title-1{
+  text-align: center;
+}
+.img-boder-r{
+  border-radius: 8px;
+}
+
+.size-img{
+width: 100px;
+}
+
+.text-img-s{
+  display: flex;
+  flex-direction: column;
+}

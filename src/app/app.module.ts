@@ -16,6 +16,7 @@ import { FooterComponent } from './layout/footer/footer.component';
 import { NavigationComponent } from './layout/navigation/navigation.component';
 import {MatButtonModule} from '@angular/material/button';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
+import {MatFormFieldModule} from '@angular/material/form-field';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import {MatButtonToggleModule} from '@angular/material/button-toggle';
     SharedModule,
     MatListModule,
     MatButtonModule,
-    MatButtonToggleModule
+    MatButtonToggleModule,
+    MatFormFieldModule
   ],
   providers: [
     {
