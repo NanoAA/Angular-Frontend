@@ -1,0 +1,136 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+.main-container{
+  position: relative;
+  max-width: 768px;
+  min-width: 320px;
+  margin: auto;
+}
+
+.container-img-banner{
+ position: relative;
+ flex: 1 0 auto;
+ max-width: 100%;
+ display: flex;
+ background-repeat: no-repeat;
+ transition: padding-bottom .2s cubic-bezier(.25,.8,.5,1);
+ flex: 1 0 0px;
+ height: 200px;
+ min-width: 320px;
+
+ box-shadow: 0 2px 4px -1px rgba(0,0,0,.2),0 4px 5px 0 rgba(0,0,0,.14),0 1px 10px 0 rgba(0,0,0,.12)!important;
+}
+
+.img-banner{
+  
+  background-image: url("../../../../assets/img/1knz0vi3l.jpg");
+   background-position: center center;
+   height: 200px;
+ 
+   background-size: cover;
+   background-repeat: no-repeat;
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   min-width: 320px;
+}
+
+
+.titulo-banner{
+  display: flex;
+  width: 100%;
+  position: absolute;
+  bottom: 4px;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 1rem!important;
+  font-weight: 700;
+  letter-spacing: .0125em;
+  line-height: 2rem;
+  word-break: break-all;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 0 12px;
+  font-family: Merriweather !important;
+
+}
+
+
+.btn-abs{
+  position: absolute;
+    z-index: 2;
+    bottom: 1px;
+    right: 4px;
+    width: 70px;
+}
+
+.title-content{
+  background: linear-gradient(to top, rgba(236,174,53,0.5), transparent);
+  height: 45px;
+  position: relative;
+  margin-top: 155px;
+
+}
+
+.menu-selection{
+ max-width: 100%;
+min-width: 320px;
+width: 768px;
+
+
+}
+
+.fixed-position{
+  position:fixed;
+  top:0;
+  left:0;
+}
+
+.container-form{
+  background-color: #ffffff;
+  position: sticky;
+  z-index: 6;
+}
+
+.container-form-1{
+padding-top: 20px;
+width: 100%;
+display: flex;
+justify-content: center;}
+
+.text-h3{
+text-align: center;
+}
+.container-form{
+  display: flex;
+justify-content: center;
+}
+
+.full-width{
+  width: 380px !important;
+}
+
+.profile-info{
+  text-align: center;
+  font-size: 25px;
+  padding-bottom: 20px;
+}
+
+.space-area{
+  margin-top: 700px;
+}
+
+.space-areas{
+  margin-top: 100px;
+}
+.space-c{
+  height: 790px;
+}
+.btn-float{
+  display: flex;
+  justify-content: center;
+}

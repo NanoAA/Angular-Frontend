@@ -13,17 +13,18 @@ import {MatListModule} from '@angular/material/list';
 import { LocationStrategy, PathLocationStrategy } from '@angular/common';
 import { SkeletonComponent } from './layout/skeleton/skeleton.component';
 import { FooterComponent } from './layout/footer/footer.component';
-import { NavigationComponent } from './layout/navigation/navigation.component';
 import {MatButtonModule} from '@angular/material/button';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import {MatFormFieldModule} from '@angular/material/form-field';
+import { NgxPageScrollCoreModule } from 'ngx-page-scroll-core';
+import { NavigationComponent } from './layout/navigation/navigation.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SkeletonComponent,
     FooterComponent,
-    NavigationComponent
+    NavigationComponent,
   ],
   imports: [
     BrowserModule,
@@ -38,7 +39,8 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     MatListModule,
     MatButtonModule,
     MatButtonToggleModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    NgxPageScrollCoreModule
   ],
   providers: [
     {

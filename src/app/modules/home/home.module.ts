@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { GalleryComponent } from './gallery/gallery.component';
 import { ContactComponent } from './contact/contact.component';
-import { FormComponent } from './form/form.component';
 import { RestaurantComponent } from './restaurant/restaurant.component';
 import { HomeRoutingModule } from './home-routing.module';
 import {MatListModule} from '@angular/material/list';
@@ -30,12 +29,17 @@ import {MatCardModule} from '@angular/material/card';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatNativeDateModule } from '@angular/material/core';
+import * as fromcomponents from '../../shared/components';
+import { NgxPageScrollCoreModule } from 'ngx-page-scroll-core';
+import { EmailComponent } from './email/email.component';
+import { VotesComponent } from './votes/votes.component';
+
+
 
 @NgModule({
   declarations: [
     GalleryComponent,
     ContactComponent,
-    FormComponent,
     RestaurantComponent,
     CocktailsComponent,
     WineComponent,
@@ -46,6 +50,11 @@ import { MatNativeDateModule } from '@angular/material/core';
     RollsComponent,
     ThaiComponent,
     SashimiComponent,
+    ...fromcomponents.components,
+    EmailComponent,
+    VotesComponent
+    
+    
   ],
   imports: [
     SharedModule,
@@ -66,7 +75,14 @@ import { MatNativeDateModule } from '@angular/material/core';
     MatDatepickerModule,
     FormsModule,
     ReactiveFormsModule,
-    MatNativeDateModule  
+    MatNativeDateModule,
+    ...fromcomponents.components,
+    NgxPageScrollCoreModule,
+    
+    
+    
   ]
+  
 })
+
 export class HomeModule { }

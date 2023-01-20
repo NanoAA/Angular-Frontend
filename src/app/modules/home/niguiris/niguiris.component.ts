@@ -6,37 +6,81 @@ import { Component } from '@angular/core';
   styleUrls: ['./niguiris.component.scss']
 })
 export class NiguirisComponent {
-  folders: Section[] = [
+
+  niguiridesalmon: Section[] = [
     {
       name: 'Niguiri de salmón',
-      detail:'Niguiri de salmón',
       number: '$3.00',
     },
-   /* {
-      name: 'Recipes',
-      updated: new Date('1/17/16'),
-    },
-    {
-      name: 'Work',
-      updated: new Date('1/28/16'),
-    },*/
   ];
- /* notes: Section[] = [
+
+  niguiridetun: Section[] = [
     {
-      name: 'Vacation Itinerary',
-      updated: new Date('2/20/16'),
+      name: 'Niguiri de atún',
+      number: '$3.00',
     },
+  ];
+
+  niguirideanguila: Section[] = [
     {
-      name: 'Kitchen Remodel',
-      updated: new Date('1/18/16'),
+      name: 'Niguiri de anguila',
+      number: '$8.00',
     },
-  ];*/
+  ];
+
+  
+  niguiriebi: Section[] = [
+    {
+      name: 'Niguiri ebi',
+      number: '$5.00',
+    },
+  ];
+  
+  niguirideikura: Section[] = [
+    {
+      name: 'Niguiri de ikura',
+      number: '$11.00',
+    },
+  ];
+
+  niguiridepescadoblanco: Section[] = [
+    {
+      name: 'Niguiri de pescado blanco',
+      number: '$2.00',
+    },
+  ];
+  
+  niguiridemasago: Section[] = [
+    {
+      name: 'Niguiri de Masago',
+      number: '$7.00',
+    },
+  ];
+  
+  niguiridekani: Section[] = [
+    {
+      name: 'Niguiri de kani',
+      number: '$3.00',
+    },
+  ];
+  
+  niguiriscrunk: Section[] = [
+    {
+      name: 'Niguiris crunk',
+      number: '$23.00',
+    },
+  ];
+ 
+
+
+  scroll(el: HTMLElement) {
+    el.scrollIntoView({behavior: 'smooth'});
+}
 
 }
 
 export interface Section {
 name: string;
-detail:string;
 number:string;
 
 }

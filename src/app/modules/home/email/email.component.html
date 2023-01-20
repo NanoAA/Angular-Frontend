@@ -1,0 +1,53 @@
+
+  <div class="container-img-banner">
+    <div class="img-banner">
+      <div class="menu-title">
+  
+      
+    <div class="title-content">
+      <h2><span class="titulo-banner">RESTAURANTE BAMBÚ</span> </h2>
+      <span class="btn-abs">  <button mat-button [matMenuTriggerFor]="menu"><img src="../../../assets/img/icons/spain.png" alt=""></button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item>Español</button>
+          <button mat-menu-item>English</button>
+        </mat-menu></span>
+      </div>
+    </div>
+  
+  </div>
+  </div>
+  <div class="container-form">
+<div class="container-form-1">
+  <form class="form-container">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title class="profile-info">Ingrese Correo Electrónico</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+  
+        <div class="example-container">
+          <mat-form-field class="full-width" appearance="fill">
+            <mat-label>Ingresa correo electronico</mat-label>
+            <input matInput  [formControl]="email" required>
+            <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+          </mat-form-field>
+        </div>
+        
+      </mat-card-content>
+      <mat-card-actions class="btn-float">
+        <button routerLink="../votes"   mat-raised-button color="primary">siguiente</button>
+      </mat-card-actions>
+
+    </mat-card>
+    
+  </form>
+
+
+        </div>
+
+        <div class="space-c"> &nbsp;</div>
+
+</div>
+
+
+

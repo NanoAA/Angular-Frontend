@@ -4,22 +4,28 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 import * as fromcomponents from './components';
+import {MatButtonModule} from '@angular/material/button';
+import {MatIconModule} from '@angular/material/icon';
 
 
 @NgModule({
-  declarations: [...fromcomponents.components],
+  declarations: [...fromcomponents.components, ],
   imports: [
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    CommonModule
+    CommonModule,
+    MatButtonModule,
+    MatIconModule,
   ],
   exports:[
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
     CommonModule,
-    ...fromcomponents.components
+    ...fromcomponents.components,
+    MatButtonModule,
+    MatIconModule,
   ]
  
 })

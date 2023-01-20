@@ -6,37 +6,33 @@ import { Component } from '@angular/core';
   styleUrls: ['./soup.component.scss']
 })
 export class SoupComponent {
-  folders: Section[] = [
+  sopamiso: Section[] = [
     {
       name: 'Sopa Miso',
-      detail:'Elaborada con pasta miso con queso tofu.',
       number: '$5.00',
-    },
-   /* {
-      name: 'Recipes',
-      updated: new Date('1/17/16'),
-    },
-    {
-      name: 'Work',
-      updated: new Date('1/28/16'),
-    },*/
-  ];
- /* notes: Section[] = [
-    {
-      name: 'Vacation Itinerary',
-      updated: new Date('2/20/16'),
-    },
-    {
-      name: 'Kitchen Remodel',
-      updated: new Date('1/18/16'),
-    },
-  ];*/
+    }];
+
+    ebisoup: Section[] = [
+      {
+        name: 'Ebi Soup ',
+        number: '$10.00',
+      }];
+
+      sopabambu: Section[] = [
+        {
+          name: 'Sopa Bambu',
+          number: '$12.00',
+        }];
+
+        scroll(el: HTMLElement) {
+          el.scrollIntoView({behavior: 'smooth'});
+      }
+      
 
 }
 
 export interface Section {
 name: string;
-detail:string;
 number:string;
 
 }

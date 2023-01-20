@@ -2,7 +2,6 @@ import { ContactComponent } from './contact/contact.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { FormComponent } from './form/form.component';
 import { RestaurantComponent } from './restaurant/restaurant.component';
 import { CocktailsComponent } from "./cocktails/cocktails.component";
 import { WineComponent } from './wine/wine.component';
@@ -13,11 +12,14 @@ import { AppetizersComponent } from './appetizers/appetizers.component';
 import { SaladsComponent } from './salads/salads.component';
 import { ThaiComponent } from './thai/thai.component';
 import { SashimiComponent } from './sashimi/sashimi.component';
+import { EmailComponent } from './email/email.component';
+import { VotesComponent } from './votes/votes.component';
 
 const routes: Routes = [
   {
     path :'',
     component: RestaurantComponent,
+    pathMatch:'full'
   },
   {
     path :'gallery',
@@ -26,11 +28,6 @@ const routes: Routes = [
   {
     path :'contact',
     component: ContactComponent,
-  },
-
-  {
-    path :'form',
-    component: FormComponent,
   },
   {
     path :'cocktails',
@@ -71,7 +68,17 @@ const routes: Routes = [
   {
     path :'sashimi',
     component: SashimiComponent,
-  }
+  },
+  {
+    path :'email',
+    component: EmailComponent,
+  },
+  
+  {
+    path :'votes',
+    component: VotesComponent,
+  },
+
 ];
 
 @NgModule({

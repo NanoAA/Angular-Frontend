@@ -91,13 +91,16 @@ width: 768px;
 }
 
 .container-form{
-  background-color: #FFFCC7;
+  background-color: #ffffff;
+
 }
 
 .container-form-1{
 padding-top: 20px;
-width: 400px;
-}
+height: 560px;
+width: 100%;
+display: flex;
+justify-content: center;}
 
 .text-h3{
 text-align: center;
@@ -123,4 +126,13 @@ justify-content: center;
 
 .space-areas{
   margin-top: 100px;
+}
+
+.btn-float{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.form-container{
+  margin-top: 10%;
 }
