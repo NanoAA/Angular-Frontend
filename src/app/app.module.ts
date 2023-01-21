@@ -18,6 +18,10 @@ import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { NgxPageScrollCoreModule } from 'ngx-page-scroll-core';
 import { NavigationComponent } from './layout/navigation/navigation.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
+
+
 
 @NgModule({
   declarations: [
@@ -40,7 +44,9 @@ import { NavigationComponent } from './layout/navigation/navigation.component';
     MatButtonModule,
     MatButtonToggleModule,
     MatFormFieldModule,
-    NgxPageScrollCoreModule
+    NgxPageScrollCoreModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     {

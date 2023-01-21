@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { GalleryComponent } from './gallery/gallery.component';
@@ -27,14 +28,13 @@ import {MatChipsModule} from '@angular/material/chips';
 import {MatRadioModule} from '@angular/material/radio';
 import {MatCardModule} from '@angular/material/card';
 import {MatDatepickerModule} from '@angular/material/datepicker';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatNativeDateModule } from '@angular/material/core';
 import * as fromcomponents from '../../shared/components';
 import { NgxPageScrollCoreModule } from 'ngx-page-scroll-core';
-import { EmailComponent } from './email/email.component';
 import { VotesComponent } from './votes/votes.component';
-
-
+import { FormsModule } from '@angular/forms' 
+import { ReactiveFormsModule} from '@angular/forms' 
+import { EmailComponent } from './email/email.component';
 
 @NgModule({
   declarations: [
@@ -51,12 +51,13 @@ import { VotesComponent } from './votes/votes.component';
     ThaiComponent,
     SashimiComponent,
     ...fromcomponents.components,
-    EmailComponent,
-    VotesComponent
-    
+    VotesComponent,
+    EmailComponent
+
     
   ],
   imports: [
+
     SharedModule,
     HomeRoutingModule,
     MatListModule,
@@ -73,12 +74,12 @@ import { VotesComponent } from './votes/votes.component';
     MatRadioModule,
     MatCardModule,
     MatDatepickerModule,
-    FormsModule,
-    ReactiveFormsModule,
     MatNativeDateModule,
     ...fromcomponents.components,
     NgxPageScrollCoreModule,
-    
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule
     
     
   ]
