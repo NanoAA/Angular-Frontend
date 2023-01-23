@@ -6,37 +6,39 @@ import { Component } from '@angular/core';
   styleUrls: ['./sashimi.component.scss']
 })
 export class SashimiComponent {
-  folders: Section[] = [
+   
+  Salmon: Section[] = [
     {
       name: 'Salmón',
-      detail:'Salmón ',
-      number: '$16.00',
-    },
-   /* {
-      name: 'Recipes',
-      updated: new Date('1/17/16'),
-    },
-    {
-      name: 'Work',
-      updated: new Date('1/28/16'),
-    },*/
-  ];
- /* notes: Section[] = [
-    {
-      name: 'Vacation Itinerary',
-      updated: new Date('2/20/16'),
-    },
-    {
-      name: 'Kitchen Remodel',
-      updated: new Date('1/18/16'),
-    },
-  ];*/
+      number: ' 4 piezas $16.00 + Opciones',
+    }, ];
+
+    atun: Section[] = [
+      {
+        name: ' Atún ',
+        number: '4 piezas $16.00 + Opciones',
+      }, ];
+
+      mixtos: Section[] = [
+        {
+          name: 'Mixtos',
+          number: '16 piezas $55.00 + Opciones',
+        }, ];
+
+
+
+              
+
+    scroll(el: HTMLElement) {
+      el.scrollIntoView({behavior: 'smooth'});
+  }
+  
+
 
 }
 
 export interface Section {
 name: string;
-detail:string;
 number:string;
 
 }

@@ -9,13 +9,13 @@ import { FormControl, Validators, FormBuilder } from '@angular/forms';
 export class FormComponent {
 
   
-  email = new FormControl('', [Validators.required, Validators.email]);
+  email = new FormControl('', [Validators.required, Validators.email ]);
 
   getErrorMessage() {
     if (this.email.hasError('required')) {
       return 'debe ingresar una direccion valida';
     }
 
-    return this.email.hasError('email') ? 'Not a valid email' : '';}
+    return this.email.hasError('email') ? 'no es una direccion valida' : '';}
   
 }

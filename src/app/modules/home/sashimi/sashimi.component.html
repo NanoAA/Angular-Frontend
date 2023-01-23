@@ -1,174 +1,94 @@
-<div class="container-1">
-  <button mat-icon-button routerLink="" aria-label="Example icon button with a vertical three dot icon">
-    <mat-icon>chevron_left</mat-icon> 
-  </button>
-  <span class="title-cockt">Sashimi
 
-</span>
-</div>
-<div class="container-2">
-  <button  class="cocktail-bambu" mat-fab extended >
-<span class="text-c-bambu">Salmón o Atún
+<div class="container">
+  <div class="container-1">
+    <button mat-icon-button routerLink="" aria-label="Example icon button with a vertical three dot icon">
+      <mat-icon>chevron_left</mat-icon> 
+    </button>
+    <span  class="title-cockt">Sashimi
 
+    </span>
+  </div>
+  <div class="container-2">
+  <div class="scroll-container"> 
+    <button  mat-button-toggle  (click)="scroll(header)"  class="cocktail-bambu" mat-fab extended >
+  <span  class="text-c-bambu">Salmón o Atún
+  </span>
+  
+    </button>
 
-</span>
-  </button>
-</div>
-<div class="container-3">
-  <span></span>
+    <button  mat-button-toggle  (click)="scroll(luzz)"  class="cocktail-bambu" mat-fab extended >
+      <span  class="text-c-bambu">Mixtos  </span>
+      
+        </button>
+                            </div>
+  
+  </div>
+  </div>
+  <div #header></div>
+  <div class="space-areas">&nbsp;</div>
+  <div  class="space-area">&nbsp;</div>
+  
+  <div class="container-3">
+    <span></span>
+  
+    <mat-list>
+      <div class="title-1" mat-subheader><span class="text-t-s">Salmón o Atún
+      </span></div>
 
-  <mat-list>
-    <div class="title-1" mat-subheader>Salmón o Atún
-
-
-</div>
-    <mat-list-item class="container-separate" *ngFor="let folder of folders">
-      <div class="name-separate" matListItemTitle> 
-        <img  class="size-img" src="../../../../assets/img/salmon.jpg" alt=""><div class="text-img-s"><span class="text-prod">{{folder.name}}</span> 
-          <span class="text-prod">{{folder.detail}}</span></div> 
-      </div>
-      <div class="number-float" matListItemLine>{{folder.number}}</div>
-    </mat-list-item>
-    <mat-divider></mat-divider>
     
-    <mat-list-item class="container-separate" *ngFor="let folder of folders">
-      <div class="name-separate" matListItemTitle> 
-        <img  class="size-img" src="../../../../assets/img/salmon.jpg" alt=""><div class="text-img-s"><span class="text-prod">{{folder.name}}</span> 
-          <span class="text-prod">{{folder.detail}}</span></div> 
-      </div>
-      <div class="number-float" matListItemLine>{{folder.number}}</div>
-    </mat-list-item>
-    <mat-divider></mat-divider>
+      <mat-list-item  class="container-separate" *ngFor="let Salmon of Salmon">
+        <div class="name-separate" matListItemTitle >
+          <img  class="img-boder-r" src="../../../../assets/img/Salmon.jpg" alt=""> 
 
-    <mat-list-item class="container-separate" *ngFor="let folder of folders">
-      <div class="name-separate" matListItemTitle> 
-        <img  class="size-img" src="../../../../assets/img/salmon.jpg" alt=""><div class="text-img-s"><span class="text-prod">{{folder.name}}</span> 
-          <span class="text-prod">{{folder.detail}}</span></div> 
-      </div>
-      <div class="number-float" matListItemLine>{{folder.number}}</div>
-    </mat-list-item>
-    <mat-divider></mat-divider>
+     <div>
+      <p class="text-prod"><b>{{Salmon.name}}</b> </p> 
+      <p class="text-detail">Salmón</p>
+     </div>
+        </div>
+        
+        <div class="number-float" matListItemLine>{{Salmon.number}}</div>
+      </mat-list-item>
+      <mat-divider></mat-divider>
+      
+        <div #luzz></div>
+      <mat-list-item  class="container-separate" *ngFor="let atun of atun">
+        <div class="name-separate" matListItemTitle >
+          <img  class="img-boder-r" src="../../../../assets/img/salmon.jpg" alt=""> 
+     <div>
+      <p class="text-prod"><b>{{atun.name}}</b> </p> 
+      <p class="text-detail">Atún
+      </p>
+     </div>
+        </div>
+        
+        <div class="number-float" matListItemLine>{{atun.number}}</div>
+      </mat-list-item>
 
-    <mat-list-item class="container-separate" *ngFor="let folder of folders">
-      <div class="name-separate" matListItemTitle> 
-        <img  class="size-img" src="../../../../assets/img/salmon.jpg" alt=""><div class="text-img-s"><span class="text-prod">{{folder.name}}</span> 
-          <span class="text-prod">{{folder.detail}}</span></div> 
-      </div>
-      <div class="number-float" matListItemLine>{{folder.number}}</div>
-    </mat-list-item>
-    <mat-divider></mat-divider>
+      <div class="title-1" mat-subheader><span class="text-t-s">Mixtos
+      </span></div>
+      <mat-divider></mat-divider>
+      
+        
+      <mat-list-item  class="container-separate" *ngFor="let mixtos of mixtos">
+        <div class="name-separate" matListItemTitle >
+          <img  class="img-boder-r" src="../../../../assets/img/mixtos.jpg" alt=""> 
 
-    <mat-list-item class="container-separate" *ngFor="let folder of folders">
-      <div class="name-separate" matListItemTitle> 
-        <img  class="size-img" src="../../../../assets/img/salmon.jpg" alt=""><div class="text-img-s"><span class="text-prod">{{folder.name}}</span> 
-          <span class="text-prod">{{folder.detail}}</span></div> 
-      </div>
-      <div class="number-float" matListItemLine>{{folder.number}}</div>
-    </mat-list-item>
-    <mat-divider></mat-divider>
+     <div>
+      <p class="text-prod"><b>{{mixtos.name}}</b> </p> 
+      <p class="text-detail">Salmon, atun, ebi, anguila, pescado blanco.
+      </p>
+     </div>
+        </div>
+        
+        <div class="number-float" matListItemLine>{{mixtos.number}}</div>
+      </mat-list-item>
 
-    <mat-list-item class="container-separate" *ngFor="let folder of folders">
-      <div class="name-separate" matListItemTitle> 
-        <img  class="size-img" src="../../../../assets/img/salmon.jpg" alt=""><div class="text-img-s"><span class="text-prod">{{folder.name}}</span> 
-          <span class="text-prod">{{folder.detail}}</span></div> 
-      </div>
-      <div class="number-float" matListItemLine>{{folder.number}}</div>
-    </mat-list-item>
-    <mat-divider></mat-divider>
+    </mat-list>
+    <div class="space-areas">&nbsp;</div>
 
-    <mat-list-item class="container-separate" *ngFor="let folder of folders">
-      <div class="name-separate" matListItemTitle> 
-        <img  class="size-img" src="../../../../assets/img/salmon.jpg" alt=""><div class="text-img-s"><span class="text-prod">{{folder.name}}</span> 
-          <span class="text-prod">{{folder.detail}}</span></div> 
-      </div>
-      <div class="number-float" matListItemLine>{{folder.number}}</div>
-    </mat-list-item>
-    <mat-divider></mat-divider>
+  </div>
+  
 
-    <mat-list-item class="container-separate" *ngFor="let folder of folders">
-      <div class="name-separate" matListItemTitle> 
-        <img  class="size-img" src="../../../../assets/img/salmon.jpg" alt=""><div class="text-img-s"><span class="text-prod">{{folder.name}}</span> 
-          <span class="text-prod">{{folder.detail}}</span></div> 
-      </div>
-      <div class="number-float" matListItemLine>{{folder.number}}</div>
-    </mat-list-item>
-    <mat-divider></mat-divider>
-
-    <mat-list-item class="container-separate" *ngFor="let folder of folders">
-      <div class="name-separate" matListItemTitle> 
-        <img  class="size-img" src="../../../../assets/img/salmon.jpg" alt=""><div class="text-img-s"><span class="text-prod">{{folder.name}}</span> 
-          <span class="text-prod">{{folder.detail}}</span></div> 
-      </div>
-      <div class="number-float" matListItemLine>{{folder.number}}</div>
-    </mat-list-item>
-    <mat-divider></mat-divider>
-
-    <mat-list-item class="container-separate" *ngFor="let folder of folders">
-      <div class="name-separate" matListItemTitle> 
-        <img  class="size-img" src="../../../../assets/img/salmon.jpg" alt=""><div class="text-img-s"><span class="text-prod">{{folder.name}}</span> 
-          <span class="text-prod">{{folder.detail}}</span></div> 
-      </div>
-      <div class="number-float" matListItemLine>{{folder.number}}</div>
-    </mat-list-item>
-    <mat-divider></mat-divider>
-
-    <mat-list-item class="container-separate" *ngFor="let folder of folders">
-      <div class="name-separate" matListItemTitle> 
-        <img  class="size-img" src="../../../../assets/img/salmon.jpg" alt=""><div class="text-img-s"><span class="text-prod">{{folder.name}}</span> 
-          <span class="text-prod">{{folder.detail}}</span></div> 
-      </div>
-      <div class="number-float" matListItemLine>{{folder.number}}</div>
-    </mat-list-item>
-    <mat-divider></mat-divider>
-
-    <mat-list-item class="container-separate" *ngFor="let folder of folders">
-      <div class="name-separate" matListItemTitle> 
-        <img  class="size-img" src="../../../../assets/img/salmon.jpg" alt=""><div class="text-img-s"><span class="text-prod">{{folder.name}}</span> 
-          <span class="text-prod">{{folder.detail}}</span></div> 
-      </div>
-      <div class="number-float" matListItemLine>{{folder.number}}</div>
-    </mat-list-item>
-    <mat-divider></mat-divider>
-
-    <mat-list-item class="container-separate" *ngFor="let folder of folders">
-      <div class="name-separate" matListItemTitle> 
-        <img  class="size-img" src="../../../../assets/img/salmon.jpg" alt=""><div class="text-img-s"><span class="text-prod">{{folder.name}}</span> 
-          <span class="text-prod">{{folder.detail}}</span></div> 
-      </div>
-      <div class="number-float" matListItemLine>{{folder.number}}</div>
-    </mat-list-item>
-    <mat-divider></mat-divider>
-
-    <mat-list-item class="container-separate" *ngFor="let folder of folders">
-      <div class="name-separate" matListItemTitle> 
-        <img  class="size-img" src="../../../../assets/img/salmon.jpg" alt=""><div class="text-img-s"><span class="text-prod">{{folder.name}}</span> 
-          <span class="text-prod">{{folder.detail}}</span></div> 
-      </div>
-      <div class="number-float" matListItemLine>{{folder.number}}</div>
-    </mat-list-item>
-    <mat-divider></mat-divider>
-
-    <mat-list-item class="container-separate" *ngFor="let folder of folders">
-      <div class="name-separate" matListItemTitle> 
-        <img  class="size-img" src="../../../../assets/img/salmon.jpg" alt=""><div class="text-img-s"><span class="text-prod">{{folder.name}}</span> 
-          <span class="text-prod">{{folder.detail}}</span></div> 
-      </div>
-      <div class="number-float" matListItemLine>{{folder.number}}</div>
-    </mat-list-item>
-    <mat-divider></mat-divider>
-
-    <mat-list-item class="container-separate" *ngFor="let folder of folders">
-      <div class="name-separate" matListItemTitle> 
-        <img  class="size-img" src="../../../../assets/img/salmon.jpg" alt=""><div class="text-img-s"><span class="text-prod">{{folder.name}}</span> 
-          <span class="text-prod">{{folder.detail}}</span></div> 
-      </div>
-      <div class="number-float" matListItemLine>{{folder.number}}</div>
-    </mat-list-item>
-    <mat-divider></mat-divider>
-
-  </mat-list>
-</div>
-<div class="space-areas">&nbsp;</div>
-<div class="space-area">&nbsp;</div>
-<div class="space-area">&nbsp;</div>
-<div class="space-areas">&nbsp;</div>
+  <div class="space-area">&nbsp;</div>
+  <div class="space-area">&nbsp;</div>
+  

@@ -26,7 +26,7 @@ font-size: 12px;
 }
 
 .container-3{
- height: 450px;
+ 
   background-color: #FFFCC7;
 }
 
@@ -50,13 +50,55 @@ font-size: 12px;
 }
 .img-boder-r{
   border-radius: 8px;
+  margin-top: 10px;
+  width: 80px;
+  height: 80px;
+ 
 }
 
-.size-img{
-width: 100px;
+.img-boder-a{
+  border-radius: 8px;
+  margin-top: 10px;
+  width: 80px;
+  height: 80px;
 }
 
-.text-img-s{
+.scroll-container {
+  max-height: 200px;
   display: flex;
-  flex-direction: column;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.scroll-container ::-webkit-scrollbar {
+ width: 0;
+}
+
+.scroll-container .cocktail-bambu{
+  min-width:110px ;
+  line-height: 110px;
+  margin-right: 2px;
+}
+
+.container{
+  position: fixed;
+  z-index: 5;
+  overflow-x: auto;
+  overflow-y: hidden;
+  max-width: 765px;
+  width: 100%;
+}
+
+.space-areas{
+  height: 75px;
+}
+
+.text-detail{
+  margin-left: 10px;
+  font-size: 15px;
+}
+
+
+.text-t-s{
+  font-size: 24px;
 }

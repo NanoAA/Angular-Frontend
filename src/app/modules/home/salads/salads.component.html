@@ -1,33 +1,65 @@
-<div class="container-1">
-  <button mat-icon-button routerLink="" aria-label="Example icon button with a vertical three dot icon">
-    <mat-icon>chevron_left</mat-icon> 
-  </button>
-  <span class="title-cockt">Ensaladas
-</span>
-</div>
-<div class="container-2">
-  <button  class="cocktail-bambu" mat-fab extended >
-<span class="text-c-bambu">Ensaladas
-</span>
-  </button>
-</div>
-<div class="container-3">
-  <span></span>
 
-  <mat-list>
-    <div class="title-1" mat-subheader>Ensaladas
-</div>
-    <mat-list-item class="container-separate" *ngFor="let folder of folders">
-      <div class="name-separate" matListItemTitle> 
-      <div class="text-img-s"><span class="text-prod">{{folder.name}}</span> 
-          <span class="text-prod">{{folder.detail}}</span></div> 
-      </div>
-      <div class="number-float" matListItemLine>{{folder.number}}</div>
-    </mat-list-item>
+<div class="container">
+  <div class="container-1">
+    <button mat-icon-button routerLink="" aria-label="Example icon button with a vertical three dot icon">
+      <mat-icon>chevron_left</mat-icon> 
+    </button>
+    <span  class="title-cockt">Ensaladas    </span>
+  </div>
+  <div class="container-2">
+  <div class="scroll-container"> 
+    <button  mat-button-toggle  (click)="scroll(header)"  class="cocktail-bambu" mat-fab extended >
+  <span  class="text-c-bambu">Ensaladas  </span>
+  
+    </button>
+                            </div>
+  
+  </div>
+  </div>
+  <div #header></div>
+  <div class="space-areas">&nbsp;</div>
+  <div  class="space-area">&nbsp;</div>
+  
+  <div class="container-3">
+    <span></span>
+  
+    <mat-list>
+      <div class="title-1" mat-subheader><span class="text-t-s">Ensaladas</span></div>
 
-  </mat-list>
-</div>
-<div class="space-areas">&nbsp;</div>
-<div class="space-area">&nbsp;</div>
-<div class="space-area">&nbsp;</div>
-<div class="space-areas">&nbsp;</div>
+    
+      <mat-list-item  class="container-separate" *ngFor="let wakame of wakame">
+        <div class="name-separate" matListItemTitle >
+     <div>
+      <p class="text-prod"><b>{{wakame.name}}</b> </p> 
+      <p class="text-detail">Ensalada de algas.</p>
+     </div>
+        </div>
+        
+        <div class="number-float" matListItemLine>{{wakame.number}}</div>
+      </mat-list-item>
+      <mat-divider></mat-divider>
+      
+        
+      <mat-list-item  class="container-separate" *ngFor="let ocean of ocean">
+        <div class="name-separate" matListItemTitle >
+          <img  class="img-boder-r" src="../../../../assets/img/thumb_IMG_20200527_145709.jpg" alt=""> 
+     <div>
+      <p class="text-prod"><b>{{ocean.name}}</b> </p> 
+      <p class="text-detail">Base de cangrejo, macedonias de salmon y atun,   wakame <br>y masago, aderezado con mayonesa picante y ponzu.
+      </p>
+     </div>
+        </div>
+        
+        <div class="number-float" matListItemLine>{{ocean.number}}</div>
+      </mat-list-item>
+
+      
+    </mat-list>
+    <div class="space-areas">&nbsp;</div>
+
+  </div>
+  
+
+  <div class="space-area">&nbsp;</div>
+  <div class="space-area">&nbsp;</div>
+  

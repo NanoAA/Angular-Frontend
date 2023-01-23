@@ -21,7 +21,7 @@ constructor(private http: HttpClient){
 
 }
 
-  onEmail(correo:{valided:boolean}){
+  onEmail(correo:{valided:string}){
     const headers = new HttpHeaders({'myheaders':'correos'});
 
 headers.append('content-type', 'https://restaurant-backend.roraimalab.com/api/checkvote');

@@ -1,171 +1,540 @@
-<div class="container-1">
-  <button mat-icon-button routerLink="" aria-label="Example icon button with a vertical three dot icon">
-    <mat-icon>chevron_left</mat-icon> 
-  </button>
-  <span class="title-cockt">Rolls
-</span>
-</div>
-<div class="container-2">
-  <button  class="cocktail-bambu" mat-fab extended >
-<span class="text-c-bambu">Clásicos
 
-</span>
-  </button>
-</div>
-<div class="container-3">
-  <span></span>
+<div class="container">
+  <div class="container-1">
+    <button mat-icon-button routerLink="" aria-label="Example icon button with a vertical three dot icon">
+      <mat-icon>chevron_left</mat-icon> 
+    </button>
+    <span  class="title-cockt">Rolls    </span>
+  </div>
+  <div class="container-2">
+  <div class="scroll-container"> 
+    <button  mat-button-toggle  (click)="scroll(header)"  class="cocktail-bambu" mat-fab extended >
+  <span  class="text-c-bambu">Clásicos  </span>
+  
+    </button>
 
-  <mat-list>
-    <div class="title-1" mat-subheader>Clásicos
+    <button  mat-button-toggle  (click)="scroll(luzz)"  class="cocktail-bambu" mat-fab extended >
+      <span  class="text-c-bambu">Ligths  </span>
+      
+        </button>
 
-</div>
-    <mat-list-item class="container-separate" *ngFor="let folder of folders">
-      <div class="name-separate" matListItemTitle> 
-        <img  class="size-img" src="../../../../assets/img/thumb_IMG_20200527_145709.jpg" alt=""><div class="text-img-s"><span class="text-prod">{{folder.name}}</span> 
-          <span class="text-prod">{{folder.detail}}</span></div> 
-      </div>
-      <div class="number-float" matListItemLine>{{folder.number}}</div>
-    </mat-list-item>
-    <mat-divider></mat-divider>
+        <button  mat-button-toggle  (click)="scroll(crunch)"  class="cocktail-bambu" mat-fab extended >
+          <span  class="text-c-bambu">Crunch
+          </span>
+          
+            </button>
+
+            <button  mat-button-toggle  (click)="scroll(inspiracion)"  class="cocktail-bambu" mat-fab extended >
+              <span  class="text-c-bambu">Inspiración  </span>
+              
+                </button>
+                            </div>
+  
+  </div>
+  </div>
+  <div #header></div>
+  <div class="space-areas">&nbsp;</div>
+  <div  class="space-area">&nbsp;</div>
+  
+  <div class="container-3">
+    <span></span>
+  
+    <mat-list>
+      <div class="title-1" mat-subheader><span class="text-t-s">Ensaladas</span></div>
+
     
-    <mat-list-item class="container-separate" *ngFor="let folder of folders">
-      <div class="name-separate" matListItemTitle> 
-        <img  class="size-img" src="../../../../assets/img/thumb_IMG_20200527_145709.jpg" alt=""><div class="text-img-s"><span class="text-prod">{{folder.name}}</span> 
-          <span class="text-prod">{{folder.detail}}</span></div> 
-      </div>
-      <div class="number-float" matListItemLine>{{folder.number}}</div>
-    </mat-list-item>
-    <mat-divider></mat-divider>
+      <mat-list-item  class="container-separate" *ngFor="let alaska of alaska">
+        <div class="name-separate" matListItemTitle >
+          <img  class="img-boder-r" src="../../../../assets/img/alaska.jpg" alt=""> 
 
-    <mat-list-item class="container-separate" *ngFor="let folder of folders">
-      <div class="name-separate" matListItemTitle> 
-        <img  class="size-img" src="../../../../assets/img/thumb_IMG_20200527_145709.jpg" alt=""><div class="text-img-s"><span class="text-prod">{{folder.name}}</span> 
-          <span class="text-prod">{{folder.detail}}</span></div> 
-      </div>
-      <div class="number-float" matListItemLine>{{folder.number}}</div>
-    </mat-list-item>
-    <mat-divider></mat-divider>
+     <div>
+      <p class="text-prod"><b>{{alaska.name}}</b> </p> 
+      <p class="text-detail">Relleno con salmón, aguacate, queso crema y topping <br> de semillas de sésamo.
+      </p>
+     </div>
+        </div>
+        
+        <div class="number-float" matListItemLine>{{alaska.number}}</div>
+      </mat-list-item>
+      <mat-divider></mat-divider>
+      
+        
+      <mat-list-item  class="container-separate" *ngFor="let alaskaespecial of alaskaespecial">
+        <div class="name-separate" matListItemTitle >
+          <img  class="img-boder-r" src="../../../../assets/img/loading.png" alt=""> 
+     <div>
+      <p class="text-prod"><b>{{alaskaespecial.name}}</b> </p> 
+      <p class="text-detail">Relleno con aguacate salmón y queso crema, <br> topping de salmón wakame e ikura.
 
-    <mat-list-item class="container-separate" *ngFor="let folder of folders">
-      <div class="name-separate" matListItemTitle> 
-        <img  class="size-img" src="../../../../assets/img/thumb_IMG_20200527_145709.jpg" alt=""><div class="text-img-s"><span class="text-prod">{{folder.name}}</span> 
-          <span class="text-prod">{{folder.detail}}</span></div> 
-      </div>
-      <div class="number-float" matListItemLine>{{folder.number}}</div>
-    </mat-list-item>
-    <mat-divider></mat-divider>
+      </p>
+     </div>
+        </div>
+        
+        <div class="number-float" matListItemLine>{{alaskaespecial.number}}</div>
+      </mat-list-item>
 
-    <mat-list-item class="container-separate" *ngFor="let folder of folders">
-      <div class="name-separate" matListItemTitle> 
-        <img  class="size-img" src="../../../../assets/img/thumb_IMG_20200527_145709.jpg" alt=""><div class="text-img-s"><span class="text-prod">{{folder.name}}</span> 
-          <span class="text-prod">{{folder.detail}}</span></div> 
-      </div>
-      <div class="number-float" matListItemLine>{{folder.number}}</div>
-    </mat-list-item>
-    <mat-divider></mat-divider>
+      <mat-divider></mat-divider>
+      
+        
+      <mat-list-item  class="container-separate" *ngFor="let dinamita of dinamita">
+        <div class="name-separate" matListItemTitle >
+     <div>
+      <p class="text-prod"><b>{{dinamita.name}}</b> </p> 
+      <p class="text-detail">      Relleno con kani, mayonesa y masago.</p>
+     </div>
+        </div>
+        
+        <div class="number-float" matListItemLine>{{dinamita.number}}</div>
+      </mat-list-item>
 
-    <mat-list-item class="container-separate" *ngFor="let folder of folders">
-      <div class="name-separate" matListItemTitle> 
-        <img  class="size-img" src="../../../../assets/img/thumb_IMG_20200527_145709.jpg" alt=""><div class="text-img-s"><span class="text-prod">{{folder.name}}</span> 
-          <span class="text-prod">{{folder.detail}}</span></div> 
-      </div>
-      <div class="number-float" matListItemLine>{{folder.number}}</div>
-    </mat-list-item>
-    <mat-divider></mat-divider>
+      <mat-divider></mat-divider>
+      
+        
+      <mat-list-item  class="container-separate" *ngFor="let dinamitaespecial of dinamitaespecial">
+        <div class="name-separate" matListItemTitle >
+          <img  class="img-boder-r" src="../../../../assets/img/dinamitaespecial.jpg" alt=""> 
 
-    <mat-list-item class="container-separate" *ngFor="let folder of folders">
-      <div class="name-separate" matListItemTitle> 
-        <img  class="size-img" src="../../../../assets/img/thumb_IMG_20200527_145709.jpg" alt=""><div class="text-img-s"><span class="text-prod">{{folder.name}}</span> 
-          <span class="text-prod">{{folder.detail}}</span></div> 
-      </div>
-      <div class="number-float" matListItemLine>{{folder.number}}</div>
-    </mat-list-item>
-    <mat-divider></mat-divider>
+     <div>
+      <p class="text-prod"><b>{{dinamitaespecial.name}}</b> </p> 
+      <p class="text-detail"> Relleno con kani y pepino, abrazado en ajonjolí <br> y topping de pasta dinamita.
+      </p>
+     </div>
+        </div>
+        
+        <div class="number-float" matListItemLine>{{dinamitaespecial.number}}</div>
+      </mat-list-item>
 
-    <mat-list-item class="container-separate" *ngFor="let folder of folders">
-      <div class="name-separate" matListItemTitle> 
-        <img  class="size-img" src="../../../../assets/img/thumb_IMG_20200527_145709.jpg" alt=""><div class="text-img-s"><span class="text-prod">{{folder.name}}</span> 
-          <span class="text-prod">{{folder.detail}}</span></div> 
-      </div>
-      <div class="number-float" matListItemLine>{{folder.number}}</div>
-    </mat-list-item>
-    <mat-divider></mat-divider>
+      <mat-divider></mat-divider>
+      
+        
+      <mat-list-item  class="container-separate" *ngFor="let ebirollespecial of ebirollespecial">
+        <div class="name-separate" matListItemTitle >
 
-    <mat-list-item class="container-separate" *ngFor="let folder of folders">
-      <div class="name-separate" matListItemTitle> 
-        <img  class="size-img" src="../../../../assets/img/thumb_IMG_20200527_145709.jpg" alt=""><div class="text-img-s"><span class="text-prod">{{folder.name}}</span> 
-          <span class="text-prod">{{folder.detail}}</span></div> 
-      </div>
-      <div class="number-float" matListItemLine>{{folder.number}}</div>
-    </mat-list-item>
-    <mat-divider></mat-divider>
+     <div>
+      <p class="text-prod"><b>{{ebirollespecial.name}}</b> </p> 
+      <p class="text-detail"> Relleno con salmón, langostinos tempura, queso crema y <br> cebollin, topping de aguacate y salsa de anguila.
 
-    <mat-list-item class="container-separate" *ngFor="let folder of folders">
-      <div class="name-separate" matListItemTitle> 
-        <img  class="size-img" src="../../../../assets/img/thumb_IMG_20200527_145709.jpg" alt=""><div class="text-img-s"><span class="text-prod">{{folder.name}}</span> 
-          <span class="text-prod">{{folder.detail}}</span></div> 
-      </div>
-      <div class="number-float" matListItemLine>{{folder.number}}</div>
-    </mat-list-item>
-    <mat-divider></mat-divider>
+      </p>
+     </div>
+        </div>
+        
+        <div class="number-float" matListItemLine>{{ebirollespecial.number}}</div>
+      </mat-list-item>
+      <mat-divider></mat-divider>
+      
+        
+      <mat-list-item  class="container-separate" *ngFor="let spicytuna of spicytuna">
+        <div class="name-separate" matListItemTitle >
+          <img  class="img-boder-r" src="../../../../assets/img/spicytuna.jpg" alt=""> 
 
-    <mat-list-item class="container-separate" *ngFor="let folder of folders">
-      <div class="name-separate" matListItemTitle> 
-        <img  class="size-img" src="../../../../assets/img/thumb_IMG_20200527_145709.jpg" alt=""><div class="text-img-s"><span class="text-prod">{{folder.name}}</span> 
-          <span class="text-prod">{{folder.detail}}</span></div> 
-      </div>
-      <div class="number-float" matListItemLine>{{folder.number}}</div>
-    </mat-list-item>
-    <mat-divider></mat-divider>
+     <div>
+      <p class="text-prod"><b>{{spicytuna.name}}</b> </p> 
+      <p class="text-detail">Relleno con berro crispy y topping de atún spicy aderezado <br> con sriracha, sésamo y cebollin.
 
-    <mat-list-item class="container-separate" *ngFor="let folder of folders">
-      <div class="name-separate" matListItemTitle> 
-        <img  class="size-img" src="../../../../assets/img/thumb_IMG_20200527_145709.jpg" alt=""><div class="text-img-s"><span class="text-prod">{{folder.name}}</span> 
-          <span class="text-prod">{{folder.detail}}</span></div> 
-      </div>
-      <div class="number-float" matListItemLine>{{folder.number}}</div>
-    </mat-list-item>
-    <mat-divider></mat-divider>
 
-    <mat-list-item class="container-separate" *ngFor="let folder of folders">
-      <div class="name-separate" matListItemTitle> 
-        <img  class="size-img" src="../../../../assets/img/thumb_IMG_20200527_145709.jpg" alt=""><div class="text-img-s"><span class="text-prod">{{folder.name}}</span> 
-          <span class="text-prod">{{folder.detail}}</span></div> 
-      </div>
-      <div class="number-float" matListItemLine>{{folder.number}}</div>
-    </mat-list-item>
-    <mat-divider></mat-divider>
+      </p>
+     </div>
+        </div>
+        
+        <div class="number-float" matListItemLine>{{spicytuna.number}}</div>
+      </mat-list-item>
 
-    <mat-list-item class="container-separate" *ngFor="let folder of folders">
-      <div class="name-separate" matListItemTitle> 
-        <img  class="size-img" src="../../../../assets/img/thumb_IMG_20200527_145709.jpg" alt=""><div class="text-img-s"><span class="text-prod">{{folder.name}}</span> 
-          <span class="text-prod">{{folder.detail}}</span></div> 
-      </div>
-      <div class="number-float" matListItemLine>{{folder.number}}</div>
-    </mat-list-item>
-    <mat-divider></mat-divider>
+      <mat-divider></mat-divider>
+      <div #luzz></div>
 
-    <mat-list-item class="container-separate" *ngFor="let folder of folders">
-      <div class="name-separate" matListItemTitle> 
-        <img  class="size-img" src="../../../../assets/img/thumb_IMG_20200527_145709.jpg" alt=""><div class="text-img-s"><span class="text-prod">{{folder.name}}</span> 
-          <span class="text-prod">{{folder.detail}}</span></div> 
-      </div>
-      <div class="number-float" matListItemLine>{{folder.number}}</div>
-    </mat-list-item>
-    <mat-divider></mat-divider>
+      <mat-list-item  class="container-separate" *ngFor="let california of california">
+        <div class="name-separate" matListItemTitle >
+          <img  class="img-boder-r" src="../../../../assets/img/california.jpg" alt=""> 
 
-    <mat-list-item class="container-separate" *ngFor="let folder of folders">
-      <div class="name-separate" matListItemTitle> 
-        <img  class="size-img" src="../../../../assets/img/thumb_IMG_20200527_145709.jpg" alt=""><div class="text-img-s"><span class="text-prod">{{folder.name}}</span> 
-          <span class="text-prod">{{folder.detail}}</span></div> 
-      </div>
-      <div class="number-float" matListItemLine>{{folder.number}}</div>
-    </mat-list-item>
-    <mat-divider></mat-divider>
+     <div>
+      <p class="text-prod"><b>{{california.name}}</b> </p> 
+      <p class="text-detail">Relleno con cangrejo, pepino, aguacate y topping de masago rojo.
+      </p>
+     </div>
+        </div>
+        
+        <div class="number-float" matListItemLine>{{california.number}}</div>
 
-  </mat-list>
-</div>
-<div class="space-areas">&nbsp;</div>
-<div class="space-area">&nbsp;</div>
-<div class="space-area">&nbsp;</div>
-<div class="space-areas">&nbsp;</div>
+      </mat-list-item>
+
+      <div class="title-1" mat-subheader><span class="text-t-s">Ligths</span></div>
+
+      <mat-divider></mat-divider>
+
+      <mat-list-item  class="container-separate" *ngFor="let proteinas of proteinas">
+        <div class="name-separate" matListItemTitle >
+          <img  class="img-boder-r" src="../../../../assets/img/proteinas.jpg" alt=""> 
+
+     <div>
+      <p class="text-prod"><b>{{proteinas.name}}</b> </p> 
+      <p class="text-detail">Relleno con salmón, pescado blanco, wakame, cangrejo <br> y masago, acompañado con salsa ponzu.
+      </p>
+     </div>
+        </div>
+        
+        <div class="number-float" matListItemLine>{{proteinas.number}}</div>
+
+      </mat-list-item>
+      <mat-divider></mat-divider>
+
+        <mat-list-item  class="container-separate" *ngFor="let trioroll of trioroll">
+          <div class="name-separate" matListItemTitle >
+            <img  class="img-boder-r" src="../../../../assets/img/trioroll.jpg" alt=""> 
+  
+       <div>
+        <p class="text-prod"><b>{{trioroll.name}}</b> </p> 
+        <p class="text-detail">Enrollados de salmón, pescado blanco y atún rellenos con kani,<br> topping de mayo spicy y salsa ponzu.
+
+  
+        </p>
+       </div>
+          </div>
+          
+          <div class="number-float" matListItemLine>{{trioroll.number}}</div>
+        </mat-list-item>
+
+        <mat-divider></mat-divider>
+
+
+        <mat-list-item  class="container-separate" *ngFor="let kiuri of kiuri">
+          <div class="name-separate" matListItemTitle >
+            <img  class="img-boder-r" src="../../../../assets/img/kiuri.jpg" alt=""> 
+  
+       <div>
+        <p class="text-prod"><b>{{kiuri.name}}</b> </p> 
+        <p class="text-detail">Roll envuelto en pepino relleno con atún, salmón,<br> kani, aguacate, queso crema y cebollín, <br> acompañado con salsa ponzu.
+  
+        </p>
+       </div>
+          </div>
+          
+          <div class="number-float" matListItemLine>{{kiuri.number}}</div>
+        </mat-list-item>
+        <mat-divider></mat-divider>
+
+        <div #crunch></div>
+
+        <mat-list-item  class="container-separate" *ngFor="let springroll of springroll">
+          <div class="name-separate" matListItemTitle >
+            <img  class="img-boder-r" src="../../../../assets/img/springroll.jpg" alt=""> 
+  
+       <div>
+        <p class="text-prod"><b>{{springroll.name}}</b> </p> 
+        <p class="text-detail">Roll relleno con salmón, hilos de arroz, kani, aguacate y <br> queso crema envuelto en hojas de arroz, <br> acompañado con salsa ponzu.
+        </p>
+       </div>
+          </div>
+          
+          <div class="number-float" matListItemLine>{{springroll.number}}</div>
+        </mat-list-item>
+
+        <div class="title-1" mat-subheader><span class="text-t-s">Crunch</span></div>
+        <mat-divider></mat-divider>
+
+
+        <mat-list-item  class="container-separate" *ngFor="let tiger of tiger">
+          <div class="name-separate" matListItemTitle >
+            <img  class="img-boder-r" src="../../../../assets/img/tiger.jpg" alt=""> 
+  
+       <div>
+        <p class="text-prod"><b>{{tiger.name}}</b> </p> 
+        <p class="text-detail">Roll tempurizado relleno con aguacate, salmón y queso crema.
+
+  
+        </p>
+       </div>
+          </div>
+          
+          <div class="number-float" matListItemLine>{{tiger.number}}</div>
+        </mat-list-item>
+        <mat-divider></mat-divider>
+
+        <mat-list-item  class="container-separate" *ngFor="let tigerespecial of tigerespecial">
+          <div class="name-separate" matListItemTitle >
+            <img  class="img-boder-r" src="../../../../assets/img/tigerespecial.jpg" alt=""> 
+  
+       <div>
+        <p class="text-prod"><b>{{tigerespecial.name}}</b> </p> 
+        <p class="text-detail">Roll tempurizado relleno con aguacate, salmón, queso crema y <br> masago con topping de pasta dinamita.
+
+        </p>
+       </div>
+          </div>
+          
+          <div class="number-float" matListItemLine>{{tigerespecial.number}}</div>
+        </mat-list-item>
+        <mat-divider></mat-divider>
+
+        <mat-list-item  class="container-separate" *ngFor="let dragonroll of dragonroll">
+          <div class="name-separate" matListItemTitle >
+            <img  class="img-boder-r" src="../../../../assets/img/dragonroll.jpg" alt=""> 
+  
+       <div>
+        <p class="text-prod"><b>{{dragonroll.name}}</b> </p> 
+        <p class="text-detail">Relleno con langostinos crunch y masago rojo, <br> topping de aguacate y salsa dragón.
+
+        </p>
+       </div>
+          </div>
+          
+          <div class="number-float" matListItemLine>{{dragonroll.number}}</div>
+        </mat-list-item>
+        <mat-divider></mat-divider>
+
+        <mat-list-item  class="container-separate" *ngFor="let crazykani of crazykani">
+          <div class="name-separate" matListItemTitle >
+            <img  class="img-boder-r" src="../../../../assets/img/crazykani.jpg" alt=""> 
+  
+       <div>
+        <p class="text-prod"><b>{{crazykani.name}}</b> </p> 
+        <p class="text-detail">Relleno con pescado blanco temporizado, langostinos crunch,<br> queso crema y cebollin, topping de kani y <br> salsa de anguila.
+
+        </p>
+       </div>
+          </div>
+          
+          <div class="number-float" matListItemLine>{{crazykani.number}}</div>
+        </mat-list-item>
+        <mat-divider></mat-divider>
+        <div #inspiracion></div>
+
+        <mat-list-item  class="container-separate" *ngFor="let scuba of scuba">
+          <div class="name-separate" matListItemTitle >
+       <div>
+        <p class="text-prod"><b>{{scuba.name}}</b> </p> 
+        <p class="text-detail">Relleno con pescado blanco tempurizado, langostinos <br> crispy, queso crema, cebollin y <br> topping de pasta dinamita.
+
+        </p>
+       </div>
+          </div>
+          
+          <div class="number-float" matListItemLine>{{scuba.number}}</div>
+        </mat-list-item>
+
+        <div class="title-1" mat-subheader><span class="text-t-s">Inspiración</span></div>
+        <mat-divider></mat-divider>
+
+        <mat-list-item  class="container-separate" *ngFor="let phiphi of phiphi">
+          <div class="name-separate" matListItemTitle >
+            <img  class="img-boder-r" src="../../../../assets/img/phiphi.jpg" alt=""> 
+  
+       <div>
+        <p class="text-prod"><b>{{phiphi.name}}</b> </p> 
+        <p class="text-detail">Relleno con pate de atún aderezado con cebollin,<br> sésamo y sriracha, chispas de tempura <br> y aguacate acompañado de salsa ponzu.
+
+        </p>
+       </div>
+          </div>
+          
+          <div class="number-float" matListItemLine>{{phiphi.number}}</div>
+        </mat-list-item>
+        <mat-divider></mat-divider>
+
+        <mat-list-item  class="container-separate" *ngFor="let bambu of bambu">
+          <div class="name-separate" matListItemTitle >  
+       <div>
+        <p class="text-prod"><b>{{bambu.name}}</b> </p> 
+        <p class="text-detail">Relleno de salmón, anguila y langostinos tempura, <br> topping de aguacate y salsa de anguila.
+
+        </p>
+       </div>
+          </div>
+          
+          <div class="number-float" matListItemLine>{{bambu.number}}</div>
+        </mat-list-item>
+        <mat-divider></mat-divider>
+
+        <mat-list-item  class="container-separate" *ngFor="let osaka of osaka">
+          <div class="name-separate" matListItemTitle >
+            <img  class="img-boder-r" src="../../../../assets/img/osaka.jpg" alt=""> 
+  
+       <div>
+        <p class="text-prod"><b>{{osaka.name}}</b> </p> 
+        <p class="text-detail">Relleno con langostinos crunch, queso crema, kani y <br> anguila, topping de salmón y langostinos <br> crunch bañados en salsa dragón y anguila.
+  
+        </p>
+       </div>
+          </div>
+          
+          <div class="number-float" matListItemLine>{{osaka.number}}</div>
+        </mat-list-item>
+        <mat-divider></mat-divider>
+
+        <mat-list-item  class="container-separate" *ngFor="let bambunew of bambunew">
+          <div class="name-separate" matListItemTitle >
+            <img  class="img-boder-r" src="../../../../assets/img/bambunew.jpg" alt=""> 
+  
+       <div>
+        <p class="text-prod"><b>{{bambunew.name}}</b> </p> 
+        <p class="text-detail">Relleno con salmón, kani, wakame, masago, queso crema <br> y aguacate, topping de arcoiris con salmón, <br>  pescado blanco y aguacate.
+        </p>
+       </div>
+          </div>
+          
+          <div class="number-float" matListItemLine>{{bambunew.number}}</div>
+        </mat-list-item>
+        <mat-divider></mat-divider>
+
+        <mat-list-item  class="container-separate" *ngFor="let tentacion of tentacion">
+          <div class="name-separate" matListItemTitle >
+            <img  class="img-boder-r" src="../../../../assets/img/tentacion.jpg" alt=""> 
+  
+       <div>
+        <p class="text-prod"><b>{{tentacion.name}}</b> </p> 
+        <p class="text-detail">Relleno con anguila, kani tempurizado y aguacate, <br> topping de plátano y queso tentación flameado.
+
+        </p>
+       </div>
+          </div>
+          
+          <div class="number-float" matListItemLine>{{tentacion.number}}</div>
+        </mat-list-item>
+        <mat-divider></mat-divider>
+
+        <mat-list-item  class="container-separate" *ngFor="let yinyan of yinyan">
+          <div class="name-separate" matListItemTitle >
+            <img  class="img-boder-r" src="../../../../assets/img/yinyan.jpg" alt=""> 
+  
+       <div>
+        <p class="text-prod"><b>{{yinyan.name}}</b> </p> 
+        <p class="text-detail">Relleno con salmon, atun y pescado blanco, topping <br> de langostinos ebi acompañado de salsa <br> yin yan.
+
+        </p>
+       </div>
+          </div>
+          
+          <div class="number-float" matListItemLine>{{yinyan.number}}</div>
+        </mat-list-item>
+        <mat-divider></mat-divider>
+
+        <mat-list-item  class="container-separate" *ngFor="let susuki of susuki">
+          <div class="name-separate" matListItemTitle >
+  
+       <div>
+        <p class="text-prod"><b>{{susuki.name}}</b> </p> 
+        <p class="text-detail">Relleno con atún y pasta dinamita, topping <br> de atún y chutney de piña.
+
+        </p>
+       </div>
+          </div>
+          
+          <div class="number-float" matListItemLine>{{susuki.number}}</div>
+        </mat-list-item>
+        <mat-divider></mat-divider>
+
+        <mat-list-item  class="container-separate" *ngFor="let fuji of fuji">
+          <div class="name-separate" matListItemTitle >
+            <img  class="img-boder-r" src="../../../../assets/img/fuji.jpg" alt=""> 
+  
+       <div>
+        <p class="text-prod"><b>{{fuji.name}}</b> </p> 
+        <p class="text-detail">Relleno con atún, kani, anguila y aguacate, topping <br> de salmón, pasta de dinamita y langostinos <br> Crispi bañados en salsa Fuji.
+        </p>
+       </div>
+          </div>
+          
+          <div class="number-float" matListItemLine>{{fuji.number}}</div>
+        </mat-list-item>
+        <mat-divider></mat-divider>
+
+        <mat-list-item  class="container-separate" *ngFor="let noriceroll of noriceroll">
+          <div class="name-separate" matListItemTitle >
+            <img  class="img-boder-r" src="../../../../assets/img/noriceroll.jpg" alt=""> 
+  
+       <div>
+        <p class="text-prod"><b>{{noriceroll.name}}</b> </p> 
+        <p class="text-detail">Roll relleno con salmón o atún, kani, wakame, <br> masago, queso crema y aguacate envuelto <br> con soya paper.
+
+        </p>
+       </div>
+          </div>
+          
+          <div class="number-float" matListItemLine>{{noriceroll.number}}</div>
+        </mat-list-item>
+        <mat-divider></mat-divider>
+
+        <mat-list-item  class="container-separate" *ngFor="let crispyrice of crispyrice">
+          <div class="name-separate" matListItemTitle >
+            <img  class="img-boder-r" src="../../../../assets/img/crispyrice.jpg" alt=""> 
+  
+       <div>
+        <p class="text-prod"><b>{{crispyrice.name}}</b> </p> 
+        <p class="text-detail">Dedos de arroz crujientes aderezados con sriracha, <br> kimchi y cebollin, envueltos en salmón y <br> con topping de anguila gratinada.
+        </p>
+       </div>
+          </div>
+          
+          <div class="number-float" matListItemLine>{{crispyrice.number}}</div>
+        </mat-list-item>
+        <mat-divider></mat-divider>
+
+        <mat-list-item  class="container-separate" *ngFor="let ebirice of ebirice">
+          <div class="name-separate" matListItemTitle >
+            <img  class="img-boder-r" src="../../../../assets/img/ebirice.jpg" alt=""> 
+  
+       <div>
+        <p class="text-prod"><b>{{ebirice.name}}</b> </p> 
+        <p class="text-detail">Gratinado de langostinos cubiertos con finos <br> cortes de salmón y topping de hilos de <br> arroz crujiente y salsa de
+
+        </p>
+       </div>
+          </div>
+          
+          <div class="number-float" matListItemLine>{{ebirice.number}}</div>
+        </mat-list-item>
+        <mat-divider></mat-divider>
+
+        <mat-list-item  class="container-separate" *ngFor="let surimi of surimi">
+          <div class="name-separate" matListItemTitle >
+            <img  class="img-boder-r" src="../../../../assets/img/surimi.jpg" alt=""> 
+  
+       <div>
+        <p class="text-prod"><b>{{surimi.name}}</b> </p> 
+        <p class="text-detail">Relleno con kani en mayo spicy, envuelto <br> en soya paper, acompañado de margarina <br> cristalizada.
+
+        </p>
+       </div>
+          </div>
+          
+          <div class="number-float" matListItemLine>{{surimi.number}}</div>
+        </mat-list-item>
+        <mat-divider></mat-divider>
+
+        <mat-list-item  class="container-separate" *ngFor="let musa of musa">
+          <div class="name-separate" matListItemTitle >
+            <img  class="img-boder-r" src="../../../../assets/img/musa.jpg" alt=""> 
+  
+       <div>
+        <p class="text-prod"><b>{{musa.name}}</b> </p> 
+        <p class="text-detail">relleno con salmon rebozado con coco, <br> platano maduro y cebollinm abrazado <br> en ajonjoli
+
+        </p>
+       </div>
+          </div>
+          
+          <div class="number-float" matListItemLine>{{musa.number}}</div>
+        </mat-list-item>
+        <mat-divider></mat-divider>
+
+        <mat-list-item  class="container-separate" *ngFor="let exclusivo of exclusivo">
+          <div class="name-separate" matListItemTitle >  
+       <div>
+        <p class="text-prod"><b>{{exclusivo.name}}</b> </p> 
+        <p class="text-detail">A gusto del cliente.
+
+        </p>
+       </div>
+          </div>
+          
+          <div class="number-float" matListItemLine>{{exclusivo.number}}</div>
+        </mat-list-item>
+
+    </mat-list>
+    <div class="space-areas">&nbsp;</div>
+
+  </div>
+  
+
+  <div class="space-area">&nbsp;</div>
+  <div class="space-area">&nbsp;</div>
+  
