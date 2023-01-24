@@ -146,3 +146,10 @@ text-align: center;
 .space-round-b{
   margin-right: 20px;
 }
+
+.mat-mdc-raised-button.mat-primary {
+  --mdc-protected-button-container-color: #ecae35 !important;
+  --mdc-protected-button-label-text-color: rgb(255, 255, 255);
+  font-weight: bold;
+}
+

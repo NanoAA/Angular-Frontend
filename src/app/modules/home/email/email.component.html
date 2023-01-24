@@ -31,9 +31,11 @@
         <div class="example-container">
           <mat-form-field class="full-width" appearance="fill">
             <mat-label>Ingresa correo electronico</mat-label>
-            <input  type="email" name="valided" ngModel matInput required >
+            <input  type="email" name="email" ngModel matInput required >
           </mat-form-field>
+          
         </div>
+        <span class="text-warnd">{{messages}}</span>
       </mat-card-content>
       <mat-card-actions class="btn-float">
         <button  type="submit"  mat-raised-button color="primary">siguiente</button>

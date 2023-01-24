@@ -146,3 +146,14 @@ justify-content: center;
   visibility: visible;
   text-align: center;
 }
+
+.mat-mdc-raised-button.mat-primary {
+  --mdc-protected-button-container-color: #ecae35;
+  --mdc-protected-button-label-text-color: rgb(255, 255, 255) !important;
+  font-weight: bold;
+}
+
+.text-warnd{
+
+  color: #f44336 !important;
+}

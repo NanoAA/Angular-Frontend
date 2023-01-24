@@ -4,7 +4,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormsModule, FormControl, Validators, FormBuilder } from '@angular/forms';
 import { EmailService  } from '../../../shared/services/email.service';
-
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-email',
@@ -20,12 +20,10 @@ export class EmailComponent implements
 OnInit  {
   
   users:any;
-
-constructor(private localHostt: EmailService){
-this.localHostt.users().subscribe((data:any)=>{
-  this.users = data;
+  public messages = '';
+constructor(private localHostt: EmailService, private router: Router){
   
-});}
+}
 
 getUserFromData(data:any){
   console.warn(data)
@@ -35,14 +33,28 @@ getUserFromData(data:any){
 }
 
 ngOnInit(): void {
-  
+  const message = '';
+  console.log(localStorage.getItem('url_callback'));
 }
 
 
-onCorreo(form:CorreoE){
 
+onCorreo(form:CorreoE){
+if (form.email == ''){
+  this.messages = 'Email es requerido.';
+}
 this.localHostt.correos(form).subscribe(data =>{
-  console.log(data)
+  if(data.hasOwnProperty('message')){
+    this.messages = data.message;
+  }else {
+    this.messages = '';
+    var url_callback = 'https://restaurant-backend.roraimalab.com/api/votes/'+ data.client +'/edit'
+    localStorage.setItem('url_callback', JSON.stringify(url_callback));
+
+    this.router.navigate(['/restaurant/votes'])
+
+
+  }
 })
 
 }

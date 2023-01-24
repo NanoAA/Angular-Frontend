@@ -18,7 +18,7 @@
 </div>
 <div class="container-form">
 <div class="container-form-1">
-<form  class="form-container">
+<form  #voteOption="ngForm" class="form-container" (ngSubmit)="onVote(voteOption.value)">
   <mat-card>
     <mat-card-header>
       <mat-card-title class="profile-info">Votación</mat-card-title>
@@ -26,8 +26,9 @@
     <div class="dis-flex">
     <mat-card-content>
       <mat-radio-group aria-label="Select an option">
-        <span class="space-round-b">        <mat-radio-button color="primary" value="1">Opción A</mat-radio-button></span>
-        <mat-radio-button color="primary" value="2">Opción B</mat-radio-button>
+        <span class="space-round-b">        
+          <mat-radio-button color="primary" name="option" value="1">Opción A</mat-radio-button></span>
+          <mat-radio-button color="primary" name="option" value="2">Opción B</mat-radio-button>
       </mat-radio-group>
    
 
@@ -36,7 +37,7 @@
     <div class="aling-r-b">
     <mat-card-actions>
     
-      <button   mat-raised-button color="primary">Votar</button>
+      <button  type="submit"   mat-raised-button color="primary">Votar</button>
     </mat-card-actions>
   </div>
   </mat-card>
