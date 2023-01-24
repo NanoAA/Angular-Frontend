@@ -1,6 +1,9 @@
+import { CorreoE } from './../../../shared/components/email.interface';
+import { Observable } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormsModule, FormControl, Validators, FormBuilder } from '@angular/forms';
+import { EmailService  } from '../../../shared/services/email.service';
 
 
 @Component({
@@ -11,30 +14,40 @@ import { FormsModule, FormControl, Validators, FormBuilder } from '@angular/form
 
 
 
-export class EmailComponent   {
+export class EmailComponent implements 
+
+
+OnInit  {
   
+  users:any;
 
-  public message:string ='';
+constructor(private localHostt: EmailService){
+this.localHostt.users().subscribe((data:any)=>{
+  this.users = data;
+  
+});}
 
-constructor(private http: HttpClient){
+getUserFromData(data:any){
+  console.warn(data)
+  this.localHostt.saveUser(data).subscribe((result)=>{
+    console.warn(result)
+  })
+}
+
+ngOnInit(): void {
+  
+}
+
+
+onCorreo(form:CorreoE){
+
+this.localHostt.correos(form).subscribe(data =>{
+  console.log(data)
+})
+
+}
+
 
 
 }
 
-  onEmail(correo:{valided:string}){
-    const headers = new HttpHeaders({'myheaders':'correos'});
-
-headers.append('content-type', 'https://restaurant-backend.roraimalab.com/api/checkvote');
-    console.log(correo);
-    this.http.post('https://restaurant-backend.roraimalab.com/api/checkvote', correo,{headers:headers} )
-    .subscribe((res)=>{
-      console.log(res)
-    })
-  }
-
-  
-  
-  email = new FormControl('', [Validators.required, Validators.email]);
-
-  
-}

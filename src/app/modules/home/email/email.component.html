@@ -19,33 +19,32 @@
   <div class="container-form">
 <div class="container-form-1">
   
-  
-  <form #validedmail="ngForm" (ngSubmit)="onEmail(validedmail.value)"    class="form-container">
+<div>
+</div>  
+  <form #validedmail="ngForm" (ngSubmit)="onCorreo(validedmail.value)"   class="form-container">
     <mat-card>
       <mat-card-header>
         <mat-card-title class="profile-info">Ingrese Correo Electrónico</mat-card-title>
+        
       </mat-card-header>
       <mat-card-content>
-      
-
         <div class="example-container">
           <mat-form-field class="full-width" appearance="fill">
             <mat-label>Ingresa correo electronico</mat-label>
             <input  type="email" name="valided" ngModel matInput required >
           </mat-form-field>
         </div>
-        
       </mat-card-content>
       <mat-card-actions class="btn-float">
-        <button   type="submit"  mat-raised-button color="primary">siguiente</button>
+        <button  type="submit"  mat-raised-button color="primary">siguiente</button>
       </mat-card-actions>
-
     </mat-card>
     
   </form>
 
         </div>
-
+        <div class="card-body">
+      </div>
         <div class="space-c"> &nbsp;</div>
 
 </div>
