@@ -14,6 +14,7 @@ import { ThaiComponent } from './thai/thai.component';
 import { SashimiComponent } from './sashimi/sashimi.component';
 import { EmailComponent } from './email/email.component';
 import { VotesComponent } from './votes/votes.component';
+import { SuccesComponent } from './succes/succes.component';
 
 const routes: Routes = [
   {
@@ -79,6 +80,10 @@ const routes: Routes = [
     component: VotesComponent,
   },
 
+  {
+    path :'succes',
+    component: SuccesComponent,
+  },
 ];
 
 @NgModule({

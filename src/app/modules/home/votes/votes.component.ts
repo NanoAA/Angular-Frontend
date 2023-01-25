@@ -22,7 +22,7 @@ ngOnInit(): void {
 
 
 url = localStorage.getItem('url_callback');
-
+option2:any;
 onVote(form:Vote){
   console.log(form)
 

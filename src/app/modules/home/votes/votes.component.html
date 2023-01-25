@@ -25,10 +25,10 @@
     </mat-card-header>
     <div class="dis-flex">
     <mat-card-content>
-      <mat-radio-group aria-label="Select an option">
-        <span class="space-round-b">        
-          <mat-radio-button color="primary" name="option" value="1">Opción A</mat-radio-button></span>
-          <mat-radio-button color="primary" name="option" value="2">Opción B</mat-radio-button>
+      <mat-radio-group name="option" [(ngModel)]="option2">
+             
+          <mat-radio-button type="radio" color="primary" [value]="1" name="option2">Opción A</mat-radio-button>
+          <mat-radio-button type="radio" color="primary" [value]="2" name="option2">Opción B</mat-radio-button>
       </mat-radio-group>
    
 

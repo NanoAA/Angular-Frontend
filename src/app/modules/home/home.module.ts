@@ -35,6 +35,7 @@ import { VotesComponent } from './votes/votes.component';
 import { FormsModule } from '@angular/forms' 
 import { ReactiveFormsModule} from '@angular/forms' 
 import { EmailComponent } from './email/email.component';
+import { SuccesComponent } from './succes/succes.component';
 
 @NgModule({
   declarations: [
@@ -52,7 +53,8 @@ import { EmailComponent } from './email/email.component';
     SashimiComponent,
     ...fromcomponents.components,
     VotesComponent,
-    EmailComponent
+    EmailComponent,
+    SuccesComponent
 
     
   ],

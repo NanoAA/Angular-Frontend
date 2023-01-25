@@ -91,23 +91,24 @@ width: 768px;
 }
 
 .container-form{
-  background-color: #ffffff;
-
+  background-color: #FFFCC7;
 }
 
 .container-form-1{
 padding-top: 20px;
-height: 560px;
-width: 100%;
-display: flex;
-justify-content: center;}
+width: 400px;
+}
 
 .text-h3{
 text-align: center;
 }
 .container-form{
+  padding-top: 20px;
+  height: 560px;
+  width: 100%;
   display: flex;
-justify-content: center;
+  justify-content: center;
+  background-color: #ffffff;
 }
 
 .full-width{
@@ -128,43 +129,39 @@ justify-content: center;
   margin-top: 100px;
 }
 
-.btn-float{
+.aling-r-b{
   display: flex;
   justify-content: flex-end;
 }
 
-.form-container{
-  margin-top: 10%;
+.dis-flex{
+  display: flex;
+  justify-content: space-around;
 }
 
-.text-post{
-  visibility: hidden;
-  text-align: center;
+.example-selected-value{
+  margin-top: 20px;
 }
 
-.changestyle{
-  visibility: visible;
-  text-align: center;
+.space-round-b{
+  margin-right: 20px;
 }
 
 .mat-mdc-raised-button.mat-primary {
-  --mdc-protected-button-container-color: #ecae35;
-  --mdc-protected-button-label-text-color: rgb(255, 255, 255) !important;
+  --mdc-protected-button-container-color: #ecae35 !important;
+  --mdc-protected-button-label-text-color: rgb(255, 255, 255);
   font-weight: bold;
 }
 
-.text-warnd{
-
-  color: #f44336 !important;
+.gallery-conatiner{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  
 }
 
-
-button[_ngcontent-qgg-c178], [type='button'][_ngcontent-qgg-c178], [type='reset'][_ngcontent-qgg-c178], [type='submit'][_ngcontent-qgg-c178] {
-  -webkit-appearance: button;
-  background-color: #ecae35 !important;
-  background-image: none;
-}
-
-.mat-mdc-raised-button:not(:disabled){
-  background-color: #ecae35 !important;
+.text-alig{
+  font-size: 24px;
+  font-weight: bold;
 }
