@@ -178,3 +178,17 @@ button[_ngcontent-qgg-c178], [type='button'][_ngcontent-qgg-c178], [type='reset'
   height: 30px !important;
   margin-left: 50px;
 }
+
+
+.container{
+  background-color: #FFFCC7;
+  animation-name: opacidad;
+animation-duration: 2s;
+position: relative;
+}
+
+@keyframes opacidad {
+
+  from{opacity: 0;}
+  to{opacity:100%; }
+}

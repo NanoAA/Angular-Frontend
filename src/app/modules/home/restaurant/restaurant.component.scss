@@ -126,3 +126,22 @@ position: relative;
   from{opacity: 0;}
   to{opacity:100%; }
 }
+
+.dialogo-i {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin: 20px;
+  
+    object-fit: cover;
+    object-position: center right;
+    position: absolute;
+    z-index: 6;
+    left: 0px;
+    top: -6px;
+  }
+.spineer-i{
+  width: 65px !important;
+  height: 88px !important;
+  left: 17px;
+}
