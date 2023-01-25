@@ -36,8 +36,15 @@ ngOnInit(): void {
   const message = '';
   console.log(localStorage.getItem('url_callback'));
 }
+ 
+isLoading = false;
+togleLoading = () => {
+  this.isLoading= true;
 
-
+  setTimeout(() =>{
+    this.isLoading = false;
+  }, 1000);
+}
 
 onCorreo(form:CorreoE){
 if (form.email == ''){
@@ -48,7 +55,7 @@ this.localHostt.correos(form).subscribe(data =>{
     this.messages = data.message;
   }else {
     this.messages = '';
-    var url_callback = 'https://restaurant-backend.roraimalab.com/api/votes/'+ data.client +'/edit'
+    var url_callback = data.client
     localStorage.setItem('url_callback', JSON.stringify(url_callback));
 
     this.router.navigate(['/restaurant/votes'])

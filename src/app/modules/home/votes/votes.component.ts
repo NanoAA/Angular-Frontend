@@ -3,6 +3,8 @@ import { FormControl, Validators, FormBuilder } from '@angular/forms';
 import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { Vote } from 'src/app/shared/components/vote.interface';
+import { VotesService } from 'src/app/shared/services/votes.service';
+
 @Component({
   selector: 'app-votes',
   templateUrl: './votes.component.html',
@@ -10,7 +12,7 @@ import { Vote } from 'src/app/shared/components/vote.interface';
 })
 export class VotesComponent implements OnInit {
 
-  constructor(private router: Router, private _http:HttpClient){
+  constructor(private localHostt: VotesService,private router: Router, private _http:HttpClient){
   
   }
 
@@ -25,13 +27,14 @@ url = localStorage.getItem('url_callback');
 option2:any;
 onVote(form:Vote){
   console.log(form)
-
-  if (this.url == null) {
-    this.url = '';
-  }
-  const rs = this._http.post(this.url, form);
-
-  console.log(rs);
+  console.log('url: ' + this.url);
+  this.localHostt.votes(form).subscribe(data =>{
+    console.log(data);
+    if (data.message == 'voto guardado'){
+      this.router.navigate(['/restaurant/succes']);
+      localStorage.removeItem('url_callback');
+    }
+  });
 }  
 
 

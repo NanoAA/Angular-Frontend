@@ -24,8 +24,9 @@
   <form #validedmail="ngForm" (ngSubmit)="onCorreo(validedmail.value)"   class="form-container">
     <mat-card>
       <mat-card-header>
-        <mat-card-title class="profile-info">Ingrese Correo Electrónico</mat-card-title>
-        
+        <mat-card-title class="profile-info">Ingrese Correo Electrónico 
+        </mat-card-title>
+        <span> <mat-spinner *ngIf="isLoading" class="spinner-run" color="primary"></mat-spinner></span>
       </mat-card-header>
       <mat-card-content>
         <div class="example-container">
@@ -38,10 +39,12 @@
         <span class="text-warnd">{{messages}}</span>
       </mat-card-content>
       <mat-card-actions class="btn-float">
-        <button  type="submit"  mat-raised-button color="primary">siguiente</button>
+        <div class="spinner-border text-warning" role="status">
+        </div>
+        <button (click)="togleLoading()" type="submit"  mat-raised-button color="primary"><span class="padd-t">siguiente</span> </button>
       </mat-card-actions>
     </mat-card>
-    
+
   </form>
 
         </div>

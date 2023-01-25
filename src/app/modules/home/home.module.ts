@@ -36,6 +36,7 @@ import { FormsModule } from '@angular/forms'
 import { ReactiveFormsModule} from '@angular/forms' 
 import { EmailComponent } from './email/email.component';
 import { SuccesComponent } from './succes/succes.component';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 
 @NgModule({
   declarations: [
@@ -81,7 +82,8 @@ import { SuccesComponent } from './succes/succes.component';
     NgxPageScrollCoreModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatProgressSpinnerModule
     
     
   ]
